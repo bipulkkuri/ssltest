@@ -45,4 +45,4 @@ to run just run the ansible-playbook
 ```ansible-playbook -i hosts testssl.yml -e "myOptions=--html"```
 This is a actual output of the program in a html file.The script will create HTML to file '${NODE}-p${port}${YYYYMMDD-HHMM}.html' file in the same folder where it was executed. Use myOptions var to pass other commands.
 
-![Alt text](/172.217.10.14_p443-20190909-1821.html?raw=true "SSL TEST REPORT")
+![Report](https://miro.medium.com/max/3122/1*aGBeRttvnfnDWcOVJCq1GA.png "SSL TEST REPORT")
