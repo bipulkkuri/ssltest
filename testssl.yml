@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: checkout testssl locally
+    run_once: true
+    git:
+      repo: https://github.com/drwetter/testssl.sh.git
+      clone: yes
+      dest: "testssl.sh"
+      depth: 1
+      force: yes
+      accept_hostkey: yes
+    delegate_to: localhost
+
+  - name: change permissions
+    local_action: command chmod +x testssl.sh/testssl.sh
+
+- hosts: localhost
+  tasks:
+    - name: run testssl on all servers
+      local_action: shell {{playbook_dir}}/testssl.sh/testssl.sh {{ myOptions }} {{ item }}
+      with_items: "{{ groups['all'] }}"
