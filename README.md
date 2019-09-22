@@ -48,7 +48,7 @@ This is a actual output of the program in a html file.The script will create HTM
 ![Report](https://miro.medium.com/max/3122/1*aGBeRttvnfnDWcOVJCq1GA.png "SSL TEST REPORT")
 
 ##NOTES:
-further testing /enhancement ,Check if root is allowed from ecternal locations
+further testing /enhancement ,Check if root is allowed from external locations
 ssh -o "StrictHostKeyChecking no" -o "ConnectTimeout=10"  -T root@<<TARGET_IP>>
 ```
 $ssh -o "StrictHostKeyChecking no" -o "ConnectTimeout=10"  -T root@172.217.10.14
