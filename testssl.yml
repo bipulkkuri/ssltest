@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   gather_facts: false
+  strategy: free
   tasks:
   - name: checkout testssl locally
     run_once: true
